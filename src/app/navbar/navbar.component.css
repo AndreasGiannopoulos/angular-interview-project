@@ -1,0 +1,26 @@
+nav {
+  background-color: rgba(36, 186, 239, 0.6);
+}
+
+.socaial-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+i {
+  margin: 0px 10px;
+  font-size: large;
+  text-align: center;
+  cursor: pointer;
+}
+.alert {
+  inset: 0px;
+  z-index: 9999;
+}
+.navbar-brand:hover {
+  cursor: pointer;
+}
+.navbar-toggler:focus
+{
+  box-shadow: none;
+}

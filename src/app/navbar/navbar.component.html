@@ -1,0 +1,31 @@
+<!-- <div *ngIf="alertlogin" class="alert alert-danger position-absolute">sadas</div> -->
+<nav class="navbar navbar-expand-lg" (scroll)="navbar_fixing()" [class.fixed-top]="fixed">
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="gotohome()">
+      <i class="fa-solid fa-clapperboard"></i>
+     <span>
+      Angular Interview Project
+     </span>
+    </a>
+    
+  </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="gotohome()">
+      <i class="fa-solid fa-house"></i>
+     <span>
+      Home
+     </span>
+    </a>
+    
+  </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="gotofavorites()">
+      <i class="fa-solid fa-heart"></i>
+     <span>
+      My List
+     </span>
+    </a>
+    
+  </div>
+</nav>
+

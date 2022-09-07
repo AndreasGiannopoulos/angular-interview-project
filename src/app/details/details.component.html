@@ -1,0 +1,25 @@
+<div class="row my-5">
+  <div class="col-md-4">
+    <img [src]="baseImgUrl + movie.poster_path" class="w-100" alt="" />
+  </div>
+  <div class="col-md-8">
+    <h2 *ngIf="movie.original_title">{{ movie.original_title }}</h2>
+    <h2 *ngIf="movie.name">{{ movie.name }}</h2>
+    <p class="py-3 lh-lg">{{ movie.overview }}</p>
+    <ul class="py-3 lh-lg">
+      <li class="py-3">popularity : {{ movie.popularity }}</li>
+      <li class="py-3">vote average : {{ movie.vote_average }}</li>
+      <li class="py-3">vote count : {{ movie.vote_count }}</li>
+      <li class="py-3">realese date : {{ movie.release_date }}</li>
+      <li class="py-3">revenue : {{ movie.revenue}}</li>
+      <li class="py-3">spoken languages : <span *ngFor="let lang of movie.spoken_languages"> {{ lang.name }} </span> </li>
+      <li class="py-3">favorite : {{ movie.favorite}}</li>
+    </ul>
+    <div class="d-flex justify-content-between" *ngIf="!movie.favorite">
+      <button class="btn btn-outline-danger" (click)="addToMyList()" >Add to Favorite</button>    
+    </div>
+    <div class="d-flex justify-content-between" *ngIf="movie.favorite">
+      <button class="btn btn-outline-primary" (click)="removeFromList()" >Remove from Favorite</button>    
+    </div>
+  </div>
+</div>
